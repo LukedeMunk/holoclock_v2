@@ -1,7 +1,7 @@
 # HoloClock v2
 [Nederlands](README.nl.md)
 
-An ESP32 based improved version of the HoloClock project of [ekaggrat](https://www.thingiverse.com/thing:570797). This code can be used for the [HoloClock v2](https://technicbuilds.munkservices.com/) DIY kit. Everything what you need is in the DIY kit, so it is recommended to buy the kit. If you want to make it without the kit, you need a 3D printer and hardware components. The components needed is listed under `Hardware`. The code is mainly explained in comments. There is also documentation [here](docs/code_documentation). You can test your own code and use these files as a backup. The software is tested on the following boards:
+An ESP32 based improved version of the HoloClock project of [ekaggrat](https://www.thingiverse.com/thing:570797). This code can be used for the [HoloClock v2](https://technicbuilds.munkservices.com/) DIY kit. Everything what you need is in the DIY kit, so it is recommended to buy the kit. If you want to make it without the kit, you need a 3D printer and hardware components. The components needed is listed under `Hardware`. The code is mainly explained in comments, but there is also documentation [here](docs/code_documentation). You can test your own code and use these files as a backup. The software is tested on the following boards:
 
 * ESP32 DEVKIT V1
 
@@ -9,7 +9,7 @@ An ESP32 based improved version of the HoloClock project of [ekaggrat](https://w
 
 ### Electronics
 
-A list of hardware components is given below. The circuit can be found in the 'docs' folder.
+A list of the needed hardware components is given below. The circuit can be found in the `docs` folder.
 
 * 1x ESP32 DEVKIT V1
 * 1x A4988 motorboard
@@ -19,9 +19,9 @@ A list of hardware components is given below. The circuit can be found in the 'd
 * 1x PCB
 * 1x DC022B Panel Mount Connector
 
-### 3D models
+### 3D objects
 
-A list of 3D models is given below. The printer which is used to print, is the Creality CR-10S Pro V2. Ultimaker Cura v4.12.1 is used to slice the objects. In the `hardware/3D models` folder, you can find the models.
+A list of the needed 3D models is given below. The printer which is used to print, is the Creality CR-10S Pro V2. Ultimaker Cura v4.12.1 is used to slice the objects. In the `hardware/3D models` folder, you can find the models.
 
 * 1x `base_1`
 * 1x `base_2`
@@ -48,14 +48,14 @@ A list of 3D models is given below. The printer which is used to print, is the C
 * 3x `wheel_1`
 * 1x `wheel_2`
 
-### Screws and nuts
+### Bolts and inserted threads
 
-A list of the screws and nuts is given below.
+A list of the bolds and inserted threads is given below.
 
-* 2x `M3 screw 5mm`
-* 1x `M3 screw 25mm`
-* 2x `M3 screw 30mm`
-* 6x `M3 screw 40mm`
+* 2x `M3 bolt 5mm`
+* 1x `M3 bolt 25mm`
+* 2x `M3 bold 30mm`
+* 6x `M3 bold 40mm`
 * 19x `M3 4mmx5mm inserted thread`
 
 ## Software
@@ -66,11 +66,11 @@ The software is written, compiled and uploaded using the Arduino IDE (v1.8.13). 
 
 ### Deployment
 
-Clone the repository, navigate to "holoclock_v2/HoloClock" folder and open "holoClock.ino". Upload to the ESP32.
+Clone the repository, navigate to the `holoclock_v2/HoloClock` folder and open `holoClock.ino`. Upload to the ESP32. An extended tutorial can be found [here](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/).
 
 Then use [this tool](https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/) to upload the webserver files (.html, .css, etc.) to the ESP32.
 
-Connect to the `Configure klok` network and fill in the password `clock1234`. Go to a browser and search for `192.168.4.1` (or `http://clock`) and connect to a wifi network.
+Connect to the `Configure clock` network and fill in the password `clock1234`. Go to a browser and search for `192.168.4.1` (or `http://clock`) and connect to a wifi network.
 After a reboot, go to a (mobile) browser and search `http://clock`. Here you can control the clock.
 
 ## Questions or feedback?

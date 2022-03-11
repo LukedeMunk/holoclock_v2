@@ -1,78 +1,86 @@
 # HoloClock v2
-
 [English](README.md)
 
-Code for an ESP32 based improved version of the HoloClock project of [ekaggrat](https://www.thingiverse.com/thing:570797). This code can be used for the [HoloClock v2](https://www.munkservices.com) DIY kit. Everything what you need is in the DIY kit, so it is recommended to buy. If you want to make it without the kit, you need a 3D printer and hardware components. The components needed is listed under `Hardware`. The code is mainly explained in the comments. You can test your own code and use these files as a backup. The software is tested on the following boards:
+Een op ESP32 gebaseerde, verbeterde versie van het HoloClock project van [ekaggrat](https://www.thingiverse.com/thing:570797). Deze code kan worden gebruikt voort de [HoloClock v2](https://technicbuilds.munkservices.com/) bouwset. Alles wat je nodig hebt zit bij de bouwset, dus het wordt aanbevolen om die te kopen. Als je de klok zelf wil bouwen zonder bouwset, heb je een 3D printer en hardware componenten nodig. De componenten zijn te vinden onder het kopje `Hardware`. De code is grotendeels verklaard met comments, maar er is ook een document [hier](docs/code_documentation) te vinden. Je kan je eigen code testen en deze code gebruiken als backup. De software is getest op de volgende borden:
 
 * ESP32 DEVKIT V1
 
 ## Hardware
 
-### Electronics
+### Elektronica
 
-A list of hardware components is given below. The circuit can be found in the 'docs' folder.
+Hieronder is een lijst van de benodigde elektronische componenten te vinden. Het circuit kan gevonden worden in de `docs` map.
 
 * 1x ESP32 DEVKIT V1
-* 1x A4988 Motorboard
-* 1x 12V xxA adapter (3.5mm/1mm DC plug)
+* 1x A4988 motorboard
+* 1x 28BYJ-48 12V motor
+* 1x 12V 2A adapter (3.5mm/1mm DC plug)
 * 1x 12V to 5V step down converter (LM7805)
 * 1x PCB
 * 1x DC022B Panel Mount Connector
 
-### 3D models
+### 3D objecten
 
-A list of 3D models is given below. The printer which is used to print, is the Creality CR-10S Pro V2. Ultimaker Cura v4.12.1 is used to slice the objects. In the `hardware/3D models` folder, you can find the models. The `300x300mm_plan.stl` file can be used to print all the needed models in one batch.
+Hieronder is een lijst van de benodigde 3D objecten te vinden. De printer die gebruikt is, is de Creality CR-10S Pro V2. Ultimaker Cura v4.12.1 is gebruikt voor het slice van de objecten. In de `hardware/3D models` map kan je de modellen vinden.
 
+* 1x `base_1`
 * 1x `base_2`
-* 1x `base_3`
 * 2x `big_ring`
 * 1x `frame_l`
 * 1x `frame_r`
 * 1x `gear_center`
 * 1x `gear_hour`
 * 1x `gear_motor`
-* 1x `gear_side`
+* 2x `gear_side`
+* 1x `joiner_7mm`
+* 1x `joiner_10mm`
+* 3x `joiner_13mm`
 * 1x `needle_hour`
 * 1x `needle_minute`
+* 1x `PCB_helper` (Optioneel)
 * 2x `roller_1`
 * 2x `roller_2`
 * 2x `roller_stopper`
-* 4x `spacer`
+* 2x `spacer_10mm`
+* 2x `spacer_14mm`
+* 2x `spacer_30mm`
+* 2x `spacer_middle`
 * 3x `wheel_1`
 * 1x `wheel_2`
 
-### Screws and nuts
+### Bouten en inserted threads
 
-A list of the screws and nuts is given below.
+Hieronder is een lijst van de benodigde bouten en inserted threads te vinden.
 
-* 6x `M3 screw 40mm`
-* 2x `M3 screw 35mm`
+* 2x `M3 screw 5mm`
 * 1x `M3 screw 25mm`
+* 2x `M3 screw 30mm`
+* 6x `M3 screw 40mm`
 * 19x `M3 4mmx5mm inserted thread`
 
 ## Software
 
-### Prerequisites
+### Inleiding
 
-The software is written, compiled and uploaded using the Arduino IDE (v1.8.13). You could use the online Arduino IDE or other software, but I recommend using the version you can download on [this page](https://www.arduino.cc/en/software).
+De software is geschreven, gecompileerd en geüploaded met de Arduino IDE (v1.8.13). Je zou de online Arduino IDE of andere software kunnen gebruiken, maar het wordt aanbevolen om [deze](https://www.arduino.cc/en/software) versie te gebruiken.
 
-### Deployment
+### Installeren
 
-Clone the repository, navigate to "holoclock_v2/HoloClock" folder and open "holoClock.ino". Upload to the ESP32.
+Clone de repository, ga naar de map `holoclock_v2/HoloClock`  en open `holoClock.ino`. Upload naar de ESP32. Een uitgebreide tutorial is [hier](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/) te vinden.
 
-Then use [this tool](https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/) to upload the webserver files (.html, .css, etc.) to the ESP32.
+Gebruik dan [deze tool](https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/) om de webserver bestanden (.html, .css, etc.) te uploaden naar de ESP32.
 
-Connect to the `Configureer klok` network and fill in the password `clock1234`. Go to a browser and search for `192.168.4.1` and connect to a wifi network.
-After a reboot, go to a (mobile) browser and search `http://clock`. Here you can control the clock.
+Verbind met het `Configure clock` netwerk en vul het wachtwoord `clock1234` in. Ga naar een browser en typ in de urlbalk `192.168.4.1` (of `http://clock`) en verbind met een wifi netwerk.
+Na een herstart, ga naar een (mobiele) browser en typ in de urlbalk `http://clock`. Hier kan je de klok bedienen.
 
-## Questions or feedback?
+## Vragen of feedback?
 
-You can submit an issue if you have questions or feedback for this repository. If you are interested in more of my projects, checkout my [GitHub profile](https://github.com/LukedeMunk). If you are interested in hiring me, checkout my [LinkedIn](https://www.linkedin.com/in/luke-de-munk/) or [website](https://www.munkservices.com).
+Je kan een issue aanmaken als je vragen of feedback hebt voor deze repository. Als je geïnteresseerd bent in meer projecten van mij, check mijn [GitHub profiel](https://github.com/LukedeMunk). Als je geïnteresseerd bent om mij in te huren, check mijn [LinkedIn](https://www.linkedin.com/in/luke-de-munk/) of [website](https://www.munkservices.com). Dit product kopen? Bezoek de [TechnicBuilds](https://technicbuilds.munkservices.com/) website.
 
 ## Authors
 
-* **Luke de Munk** - *Head author of software* - [LinkedIn](https://www.linkedin.com/in/luke-de-munk/)
-* **ekaggrat** - *Creator of original project* - [ekaggrat](https://www.thingiverse.com/thing:570797)
+* **Luke de Munk** - *Hoofdauteur van de software* - [LinkedIn](https://www.linkedin.com/in/luke-de-munk/)
+* **ekaggrat** - *Maker van het originele project* - [ekaggrat](https://www.thingiverse.com/thing:570797)
 
 <!-- ## License
 
