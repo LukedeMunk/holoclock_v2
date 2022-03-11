@@ -1,6 +1,6 @@
 # HoloClock v2
 
-[english](https://github.com/LukedeMunk/holoclock_v2/blob/master/README.nl.md)
+[Nederlands](https://github.com/LukedeMunk/holoclock_v2/blob/master/README.nl.md)
 
 Code for an ESP32 based improved version of the HoloClock project of [ekaggrat](https://www.thingiverse.com/thing:570797). This code can be used for the [HoloClock v2](https://www.munkservices.com) DIY kit. Everything what you need is in the DIY kit, so it is recommended to buy. If you want to make it without the kit, you need a 3D printer and hardware components. The components needed is listed under `Hardware`. The code is mainly explained in the comments. You can test your own code and use these files as a backup. The software is tested on the following boards:
 
