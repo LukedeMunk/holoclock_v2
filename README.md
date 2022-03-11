@@ -1,8 +1,7 @@
 # HoloClock v2
-
 [Nederlands](README.nl.md)
 
-An ESP32 based improved version of the HoloClock project of [ekaggrat](https://www.thingiverse.com/thing:570797). This code can be used for the [HoloClock v2](https://technicbuilds.munkservices.com/) DIY kit. Everything what you need is in the DIY kit, so it is recommended to buy the kit. If you want to make it without the kit, you need a 3D printer and hardware components. The components needed is listed under `Hardware`. The code is mainly explained in comments. There is also documentation [here](https://github.com/LukedeMunk/holoclock_v2/blob/master/README.nl.md) You can test your own code and use these files as a backup. The software is tested on the following boards:
+An ESP32 based improved version of the HoloClock project of [ekaggrat](https://www.thingiverse.com/thing:570797). This code can be used for the [HoloClock v2](https://technicbuilds.munkservices.com/) DIY kit. Everything what you need is in the DIY kit, so it is recommended to buy the kit. If you want to make it without the kit, you need a 3D printer and hardware components. The components needed is listed under `Hardware`. The code is mainly explained in comments. There is also documentation [here](docs/code_documentation). You can test your own code and use these files as a backup. The software is tested on the following boards:
 
 * ESP32 DEVKIT V1
 
@@ -13,31 +12,39 @@ An ESP32 based improved version of the HoloClock project of [ekaggrat](https://w
 A list of hardware components is given below. The circuit can be found in the 'docs' folder.
 
 * 1x ESP32 DEVKIT V1
-* 1x A4988 Motorboard
-* 1x 12V xxA adapter (3.5mm/1mm DC plug)
+* 1x A4988 motorboard
+* 1x 28BYJ-48 12V motor
+* 1x 12V 2A adapter (3.5mm/1mm DC plug)
 * 1x 12V to 5V step down converter (LM7805)
 * 1x PCB
 * 1x DC022B Panel Mount Connector
 
 ### 3D models
 
-A list of 3D models is given below. The printer which is used to print, is the Creality CR-10S Pro V2. Ultimaker Cura v4.12.1 is used to slice the objects. In the `hardware/3D models` folder, you can find the models. The `300x300mm_plan.stl` file can be used to print all the needed models in one batch.
+A list of 3D models is given below. The printer which is used to print, is the Creality CR-10S Pro V2. Ultimaker Cura v4.12.1 is used to slice the objects. In the `hardware/3D models` folder, you can find the models.
 
+* 1x `base_1`
 * 1x `base_2`
-* 1x `base_3`
 * 2x `big_ring`
 * 1x `frame_l`
 * 1x `frame_r`
 * 1x `gear_center`
 * 1x `gear_hour`
 * 1x `gear_motor`
-* 1x `gear_side`
+* 2x `gear_side`
+* 1x `joiner_7mm`
+* 1x `joiner_10mm`
+* 3x `joiner_13mm`
 * 1x `needle_hour`
 * 1x `needle_minute`
+* 1x `PCB_helper` (Optional)
 * 2x `roller_1`
 * 2x `roller_2`
 * 2x `roller_stopper`
-* 4x `spacer`
+* 2x `spacer_10mm`
+* 2x `spacer_14mm`
+* 2x `spacer_30mm`
+* 2x `spacer_middle`
 * 3x `wheel_1`
 * 1x `wheel_2`
 
@@ -45,16 +52,17 @@ A list of 3D models is given below. The printer which is used to print, is the C
 
 A list of the screws and nuts is given below.
 
-* 6x `M3 screw 40mm`
-* 2x `M3 screw 35mm`
+* 2x `M3 screw 5mm`
 * 1x `M3 screw 25mm`
+* 2x `M3 screw 30mm`
+* 6x `M3 screw 40mm`
 * 19x `M3 4mmx5mm inserted thread`
 
 ## Software
 
 ### Prerequisites
 
-The software is written, compiled and uploaded using the Arduino IDE (v1.8.13). You could use the online Arduino IDE or other software, but I recommend using the version you can download on [this page](https://www.arduino.cc/en/software).
+The software is written, compiled and uploaded using the Arduino IDE (v1.8.13). You could use the online Arduino IDE or other software, but it is recommended using the version you can download on [this page](https://www.arduino.cc/en/software).
 
 ### Deployment
 
@@ -62,12 +70,12 @@ Clone the repository, navigate to "holoclock_v2/HoloClock" folder and open "holo
 
 Then use [this tool](https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/) to upload the webserver files (.html, .css, etc.) to the ESP32.
 
-Connect to the `Configureer klok` network and fill in the password `clock1234`. Go to a browser and search for `192.168.4.1` and connect to a wifi network.
+Connect to the `Configure klok` network and fill in the password `clock1234`. Go to a browser and search for `192.168.4.1` (or `http://clock`) and connect to a wifi network.
 After a reboot, go to a (mobile) browser and search `http://clock`. Here you can control the clock.
 
 ## Questions or feedback?
 
-You can submit an issue if you have questions or feedback for this repository. If you are interested in more of my projects, checkout my [GitHub profile](https://github.com/LukedeMunk). If you are interested in hiring me, checkout my [LinkedIn](https://www.linkedin.com/in/luke-de-munk/) or [website](https://www.munkservices.com).
+You can submit an issue if you have questions or feedback for this repository. If you are interested in more of my projects, checkout my [GitHub profile](https://github.com/LukedeMunk). If you are interested in hiring me, checkout my [LinkedIn](https://www.linkedin.com/in/luke-de-munk/) or [website](https://www.munkservices.com). Want to buy this product? Visit the [TechnicBuilds](https://technicbuilds.munkservices.com/) website.
 
 ## Authors
 
